@@ -4,7 +4,9 @@
 const express = require('express')
 
 const router = express.Router()
-const homeController = require()
+const homeController = require('../controllers/home')
 
-router.get('/', homeController.getIndex)
-router.post('/new', homeController.createItem)
+router.get('/', homeController.getIndex) //read
+router.post('/new', homeController.createItem) //create
+
+module.exports = router 
