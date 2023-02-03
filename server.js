@@ -3,7 +3,9 @@ const app = express()
 const PORT = 8000
 const mongoose = require('mongoose')
 
-
+//============================
+// Import Functions and Routes
+//============================
 const connectDB = require('./config/databse')
 
 require('dotenv').config({path: './config/.env'})
