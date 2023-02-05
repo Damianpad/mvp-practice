@@ -7,6 +7,8 @@ const mongoose = require('mongoose')
 // Import Functions and Routes
 //============================
 const connectDB = require('./config/databse')
+const home = require('./controllers/home')
+const homeRoutes = require('./routes/home')
 
 require('dotenv').config({path: './config/.env'})
 
@@ -21,6 +23,12 @@ connectDB()
 app.set('view engine', 'ejs')
 app.set(express.static('public'))
 app.use(express.urlencoded({extended: true}))
+
+//============
+// Set Routers
+//============
+app.use('/', homeRoutes)
+
 
 //=========
 // Listener

@@ -1,15 +1,15 @@
 const mongoose = require('mongoose')
 const itemListSchema = new mongoose.Schema({
     textInput: {
-        typeof: String,
+        type: String,
         required: true
     },
     numInput: {
-        typeof: Number,
+        type: Number,
         required: true
     },
     date: {
-        typeof: Date,
+        type: Date,
         default: Date.now
     }
 })
