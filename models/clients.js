@@ -11,4 +11,4 @@ const clientListSchema = new mongoose.Schema({
     }
 })
 
-module.expors = mongoose.model('clientList', clientListSchema, 'clients')
+module.exports = mongoose.model('clientList', clientListSchema, 'clients')
