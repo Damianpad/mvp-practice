@@ -27,6 +27,8 @@
         <input type="text" placeholder="Client Name" name="clientName">
         <label for="clientPhone">Client Phone</label>
         <input type="text" placeholder="Client Phone" name="clientPhone">
+        <label for="clientEmail">Client Email</label>
+        <input type="text" placeholder="Client Email" name="clientEmail">
         <button type="submit">Add Client</button>
     </form>
 
@@ -34,9 +36,11 @@
         <% clientList.forEach(client => { %>
             <li>
                 <div><%= client.clientName %></div>
+                <div><%= client.clientEmail %></div>
                 <div><%= client.clientPhone %></div>
+                
                 <a href="">Edit</a>
-                <a href="">Remove</a>
+                <a href="/edit/remove">Remove</a>
             </li>
         <% }) %>
     </ul>

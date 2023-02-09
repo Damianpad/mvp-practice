@@ -7,6 +7,10 @@ const clientListSchema = new mongoose.Schema({
     clientPhone: {
         type: String,
         required: true
+    },
+    clientEmail: {
+        type: String,
+        required: true
     }
 })
 

@@ -13,7 +13,8 @@ module.exports = {
         const newClient = new clientList (
             {
                 clientName: req.body.clientName,
-                clientPhone: req.body.clientPhone
+                clientPhone: req.body.clientPhone,
+                clientEmail: req.body.clientEmail
             }
         )
         try {

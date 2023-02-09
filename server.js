@@ -10,6 +10,7 @@ const connectDB = require('./config/databse')
 const home = require('./controllers/home')
 const homeRoutes = require('./routes/home')
 const clientRoutes = require('./routes/clientRouter')
+const clientEditRoutes = require('./routes/clientRouter')
 
 require('dotenv').config({path: './config/.env'})
 
@@ -30,6 +31,7 @@ app.use(express.urlencoded({extended: true}))
 //============
 // app.use('/', homeRoutes)
 app.use('/', clientRoutes)
+app.use('/edit', clientEditRoutes)
 
 
 //=========
