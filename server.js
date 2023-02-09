@@ -9,6 +9,7 @@ const mongoose = require('mongoose')
 const connectDB = require('./config/databse')
 const home = require('./controllers/home')
 const homeRoutes = require('./routes/home')
+const clientRoutes = require('./routes/clientRouter')
 
 require('dotenv').config({path: './config/.env'})
 
@@ -27,7 +28,8 @@ app.use(express.urlencoded({extended: true}))
 //============
 // Set Routers
 //============
-app.use('/', homeRoutes)
+// app.use('/', homeRoutes)
+app.use('/', clientRoutes)
 
 
 //=========

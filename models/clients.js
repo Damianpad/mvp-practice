@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-
 const clientListSchema = new mongoose.Schema({
     clientName: {
         type: String,
@@ -10,5 +9,6 @@ const clientListSchema = new mongoose.Schema({
         required: true
     }
 })
+
 
 module.exports = mongoose.model('clientList', clientListSchema, 'clients')

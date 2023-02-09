@@ -17,17 +17,30 @@
         <button type="submit">Add Item</button>
     </form>
 
-    <ul>
-        // ADD EJS
-    </ul>
+
+    
 
     <h2>Add A Client:</h2>
 
     <form action="/addClient" method="POST">
+        <label for="clientName">Client Name</label>
         <input type="text" placeholder="Client Name" name="clientName">
+        <label for="clientPhone">Client Phone</label>
         <input type="text" placeholder="Client Phone" name="clientPhone">
-        <input type="submit">
+        <button type="submit">Add Client</button>
     </form>
+
+    <ul>
+        <% clientList.forEach(client => { %>
+            <li>
+                <div><%= client.clientName %></div>
+                <div><%= client.clientPhone %></div>
+                <a href="">Edit</a>
+                <a href="">Remove</a>
+            </li>
+        <% }) %>
+    </ul>
+
 
 
 </body>

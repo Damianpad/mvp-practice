@@ -1,7 +1,7 @@
 const clientList = require('../models/clients')
 
 module.exports = {
-    getClient: async (req, res) => {
+    getClient: async (req,res) => {
         try {
             const clients = await clientList.find()
             res.render('index.ejs', {clientList: clients})
