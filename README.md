@@ -21,6 +21,12 @@ To get started with Vivid, simply clone and add the following dependencies.
 npm install express mongoose dotenv ejs nodemon
 ```
 
+Create a new .env file in the config folder and connect your own MongoDB server to a DB_CONNECTION string.
+
+```
+DB_CONNECTION = <INSERT YOUR OWN MONGODB CONNECTION STRING>
+```
+
 Use npm start to run the server
 
 ```
