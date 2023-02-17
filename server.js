@@ -32,6 +32,8 @@ app.use(express.urlencoded({extended: true}))
 // app.use('/', homeRoutes)
 app.use('/', clientRoutes)
 app.use('/edit', clientEditRoutes)
+app.use('/edit/remove', clientEditRoutes)
+app.use('/delete', clientEditRoutes)
 
 
 //=========
