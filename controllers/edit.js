@@ -22,5 +22,21 @@ module.exports = {
         } catch(err){
             return res.status(500).send(err)
         }
+    },
+    updateClient: async (req,res) => {
+        const id = req.params.id
+        try {
+            await clientList.findByIdAndUpdate(
+                id,
+                {
+                  clientName: req.body.clientName,
+                  clientEmail: req.body.clientEmail,
+                  clientPhone: req.body.clientPhone 
+                },
+                )
+                res.redirect('/')
+        } catch(err){
+            return res.status(500).send(err)
+        }
     }
 }

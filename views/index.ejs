@@ -39,8 +39,8 @@
                 <div><%= client.clientEmail %></div>
                 <div><%= client.clientPhone %></div>
                 
-                <a href="/edit">Edit</a>
-                <a href="/edit/delete/<%= client.id %>">Remove</a>
+                <a href="/edit/<%= client._id %>">Edit</a>
+                <a href="/edit/remove/<%= client._id %>">Remove</a>
             </li>
         <% }) %>
     </ul>
