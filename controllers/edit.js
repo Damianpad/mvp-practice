@@ -7,7 +7,7 @@ module.exports = {
         try {
             console.log('client edited');
             const clients = await clientList.find()
-            res.render('edit.ejs', {clientList: clients, idItem: id})
+            res.render('edit.ejs', {clientList: clients, idClient: id})
         }catch (err) {
             return res.status(500).send(err)
         }

@@ -7,11 +7,45 @@
     <title>Edit Client</title>
 </head>
 <body>
-    <h1>Edit a Client</h1>
     <section>
-        <ul>
-            //Add EJS TO EDIT 
-        </ul>
+        <h1><h1>This is the Edit Page!</h1></h1>
+        <section>
+            <ul>
+                <% clientList.forEach(client => { %>
+                    <% if (client._id==idClient) { %>
+                        <li>
+                            <div>
+                                <%= client.clientName %>
+                            </div>
+                            <div>
+                                <%= client.clientPhone %>
+                            </div>
+                            <form action="/edit/update/<%= client._id %>" method="POST">
+                                <label for="clientName">Client Name</label>
+                                <input type="text" placeholder="Client Name" name="clientName">
+                                <label for="clientPhone">Client Phone</label>
+                                <input type="text" placeholder="Client Phone" name="clientPhone">
+                                <label for="clientEmail">Client Email</label>
+                                <input type="text" placeholder="Client Email" name="clientEmail">
+                                <button type="submit" class="confirm">Confirm</button>
+                                <a href="/" class="cancel">Cancel</a>
+                            </form>
+                        </li>
+                        <% } else { %>
+                            <li>
+                                <div>
+                                    <%= client.clientName %>
+                                </div>
+                                <div>
+                                    <%= client.clientPhone %>
+                                </div>
+                                <a href="/edit/<%= client._id %>">Edit</a>
+                                <a href="/edit/remove/<%= client._id %>" class="remove">Cancel</a>
+                            </li>
+                            <% } %>
+                                <% }) %>
+            </ul>
+        </section>
     </section>
 
 </body>
