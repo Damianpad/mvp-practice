@@ -14,12 +14,7 @@
                 <% clientList.forEach(client => { %>
                     <% if (client._id==idClient) { %>
                         <li>
-                            <div>
-                                <%= client.clientName %>
-                            </div>
-                            <div>
-                                <%= client.clientPhone %>
-                            </div>
+
                             <form action="/edit/update/<%= client._id %>" method="POST">
                                 <label for="clientName">Client Name</label>
                                 <input type="text" placeholder="Client Name" name="clientName" value=<%= client.clientName %>>
@@ -33,12 +28,6 @@
                         </li>
                         <% } else { %>
                             <li>
-                                <div>
-                                    <%= client.clientName %>
-                                </div>
-                                <div>
-                                    <%= client.clientPhone %>
-                                </div>
                                 <a href="/edit/<%= client._id %>">Edit</a>
                                 <a href="/edit/remove/<%= client._id %>" class="remove">Cancel</a>
                             </li>
