@@ -22,11 +22,11 @@
                             </div>
                             <form action="/edit/update/<%= client._id %>" method="POST">
                                 <label for="clientName">Client Name</label>
-                                <input type="text" placeholder="Client Name" name="clientName">
+                                <input type="text" placeholder="Client Name" name="clientName" value=<%= client.clientName %>>
                                 <label for="clientPhone">Client Phone</label>
-                                <input type="text" placeholder="Client Phone" name="clientPhone">
+                                <input type="text" placeholder="Client Phone" name="clientPhone" value=<%= client.clientPhone %>>
                                 <label for="clientEmail">Client Email</label>
-                                <input type="text" placeholder="Client Email" name="clientEmail">
+                                <input type="text" placeholder="Client Email" name="clientEmail" value=<%= client.clientEmail %>>
                                 <button type="submit" class="confirm">Confirm</button>
                                 <a href="/" class="cancel">Cancel</a>
                             </form>
