@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./public/input.css -o ./dist/main.css",
+    "watch": "tailwindcss -i ./public/input.css -o ./dist/main.css --watch",
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
@@ -16,5 +17,8 @@
     "express": "^4.18.2",
     "mongoose": "^6.9.1",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
   }
 }
